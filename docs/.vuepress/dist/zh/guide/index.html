@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ES6 | VuePress</title>
+    <meta name="description" content="Vue 驱动的静态网站生成器">
+    <meta name="generator" content="VuePress 1.3.1">
+    <link rel="icon" href="/logo.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#3eaf7c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon-152x152.png">
+  <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#3eaf7c">
+  <meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/assets/css/0.styles.9fe82091.css" as="style"><link rel="preload" href="/assets/js/app.dd039b7c.js" as="script"><link rel="preload" href="/assets/js/5.d9fe358c.js" as="script"><link rel="preload" href="/assets/js/66.1bc27aef.js" as="script"><link rel="preload" href="/assets/js/9.999afb76.js" as="script"><link rel="prefetch" href="/assets/js/10.99c41dc8.js"><link rel="prefetch" href="/assets/js/100.b4e520e1.js"><link rel="prefetch" href="/assets/js/101.6c32120b.js"><link rel="prefetch" href="/assets/js/102.b5a231bb.js"><link rel="prefetch" href="/assets/js/11.291f9131.js"><link rel="prefetch" href="/assets/js/12.f8fc213a.js"><link rel="prefetch" href="/assets/js/13.c3963782.js"><link rel="prefetch" href="/assets/js/14.ae9f21ef.js"><link rel="prefetch" href="/assets/js/15.88c939ec.js"><link rel="prefetch" href="/assets/js/16.0da15920.js"><link rel="prefetch" href="/assets/js/17.95b35ec4.js"><link rel="prefetch" href="/assets/js/18.54196093.js"><link rel="prefetch" href="/assets/js/19.b56bdbe9.js"><link rel="prefetch" href="/assets/js/20.c9f837ef.js"><link rel="prefetch" href="/assets/js/21.6a595d41.js"><link rel="prefetch" href="/assets/js/22.374551d7.js"><link rel="prefetch" href="/assets/js/23.d996bdb1.js"><link rel="prefetch" href="/assets/js/24.4b4a2ad3.js"><link rel="prefetch" href="/assets/js/25.84e284d9.js"><link rel="prefetch" href="/assets/js/26.6d237cd5.js"><link rel="prefetch" href="/assets/js/27.38e61737.js"><link rel="prefetch" href="/assets/js/28.8da1b2b1.js"><link rel="prefetch" href="/assets/js/29.96e4540c.js"><link rel="prefetch" href="/assets/js/30.6d1c2591.js"><link rel="prefetch" href="/assets/js/31.b2bda897.js"><link rel="prefetch" href="/assets/js/32.0a292edb.js"><link rel="prefetch" href="/assets/js/33.4bfda821.js"><link rel="prefetch" href="/assets/js/34.5566be49.js"><link rel="prefetch" href="/assets/js/35.81f0c00e.js"><link rel="prefetch" href="/assets/js/36.8eb50e2f.js"><link rel="prefetch" href="/assets/js/37.2afb8052.js"><link rel="prefetch" href="/assets/js/38.5559a549.js"><link rel="prefetch" href="/assets/js/39.3ebb99f2.js"><link rel="prefetch" href="/assets/js/40.71559465.js"><link rel="prefetch" href="/assets/js/41.0bdc54a5.js"><link rel="prefetch" href="/assets/js/42.38e44eb9.js"><link rel="prefetch" href="/assets/js/43.140bccc0.js"><link rel="prefetch" href="/assets/js/44.730e3811.js"><link rel="prefetch" href="/assets/js/45.23d71be0.js"><link rel="prefetch" href="/assets/js/46.0f8d70d5.js"><link rel="prefetch" href="/assets/js/47.3d5f3dba.js"><link rel="prefetch" href="/assets/js/48.ded8ad59.js"><link rel="prefetch" href="/assets/js/49.6f0976a0.js"><link rel="prefetch" href="/assets/js/50.84da56ce.js"><link rel="prefetch" href="/assets/js/51.82b20610.js"><link rel="prefetch" href="/assets/js/52.4a94d754.js"><link rel="prefetch" href="/assets/js/53.6734ef9b.js"><link rel="prefetch" href="/assets/js/54.c5c8fcf9.js"><link rel="prefetch" href="/assets/js/55.7fb2cc01.js"><link rel="prefetch" href="/assets/js/56.c779968e.js"><link rel="prefetch" href="/assets/js/57.bb1605a7.js"><link rel="prefetch" href="/assets/js/58.374a1f7a.js"><link rel="prefetch" href="/assets/js/59.039ad1ef.js"><link rel="prefetch" href="/assets/js/6.c925bac8.js"><link rel="prefetch" href="/assets/js/60.49c49bd7.js"><link rel="prefetch" href="/assets/js/61.d76a661a.js"><link rel="prefetch" href="/assets/js/62.1ff7d3bb.js"><link rel="prefetch" href="/assets/js/63.92a988c3.js"><link rel="prefetch" href="/assets/js/64.71d73abe.js"><link rel="prefetch" href="/assets/js/65.b76fa2c6.js"><link rel="prefetch" href="/assets/js/67.0b3e9e5c.js"><link rel="prefetch" href="/assets/js/68.3ab59591.js"><link rel="prefetch" href="/assets/js/69.541f52ba.js"><link rel="prefetch" href="/assets/js/7.922ff356.js"><link rel="prefetch" href="/assets/js/70.84da3add.js"><link rel="prefetch" href="/assets/js/71.bf03c7d6.js"><link rel="prefetch" href="/assets/js/72.dfe11e8f.js"><link rel="prefetch" href="/assets/js/73.c0508f27.js"><link rel="prefetch" href="/assets/js/74.56e5bfd9.js"><link rel="prefetch" href="/assets/js/75.be73c819.js"><link rel="prefetch" href="/assets/js/76.3ea42085.js"><link rel="prefetch" href="/assets/js/77.5c2cacf5.js"><link rel="prefetch" href="/assets/js/78.b75e0514.js"><link rel="prefetch" href="/assets/js/79.1baf4095.js"><link rel="prefetch" href="/assets/js/8.d52bba0a.js"><link rel="prefetch" href="/assets/js/80.714a4cb3.js"><link rel="prefetch" href="/assets/js/81.daa905d7.js"><link rel="prefetch" href="/assets/js/82.d6b60f48.js"><link rel="prefetch" href="/assets/js/83.673270f1.js"><link rel="prefetch" href="/assets/js/84.b5f86e12.js"><link rel="prefetch" href="/assets/js/85.69b2a62e.js"><link rel="prefetch" href="/assets/js/86.8dd7075b.js"><link rel="prefetch" href="/assets/js/87.98865838.js"><link rel="prefetch" href="/assets/js/88.83264c2a.js"><link rel="prefetch" href="/assets/js/89.d4a4bc0c.js"><link rel="prefetch" href="/assets/js/90.b13204f5.js"><link rel="prefetch" href="/assets/js/91.b85768b6.js"><link rel="prefetch" href="/assets/js/92.3d509da3.js"><link rel="prefetch" href="/assets/js/93.f45b6dd5.js"><link rel="prefetch" href="/assets/js/94.55f57a20.js"><link rel="prefetch" href="/assets/js/95.bea0bd9f.js"><link rel="prefetch" href="/assets/js/96.ea1728bc.js"><link rel="prefetch" href="/assets/js/97.5bc35d44.js"><link rel="prefetch" href="/assets/js/98.247a34c9.js"><link rel="prefetch" href="/assets/js/99.a9d64836.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.f38ce270.js"><link rel="prefetch" href="/assets/js/vendors~flowchart.5f3dc1c3.js"><link rel="prefetch" href="/assets/js/vendors~notification.2908d4ea.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.9fe82091.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/zh/" class="home-link router-link-active"><!----> <span class="site-name">VuePress</span></a> <div class="links"><form id="search-form" role="search" class="algolia-search-wrapper search-box"><input id="algolia-search-input" class="search-query"></form> <nav class="nav-links can-hide"><div class="nav-item"><a href="/zh/guide/" class="nav-link router-link-exact-active router-link-active">
+  指南
+</a></div><div class="nav-item"><a href="/zh/config/" class="nav-link">
+  配置
+</a></div><div class="nav-item"><a href="/zh/plugin/" class="nav-link">
+  插件
+</a></div><div class="nav-item"><a href="/zh/theme/" class="nav-link">
+  主题
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="了解更多" class="dropdown-title"><span class="title">了解更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          API
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/zh/api/cli.html" class="nav-link">
+  CLI
+</a></li><li class="dropdown-subitem"><a href="/zh/api/node.html" class="nav-link">
+  Node
+</a></li></ul></li><li class="dropdown-item"><h4>
+          开发指南
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/zh/miscellaneous/local-development.html" class="nav-link">
+  本地开发
+</a></li><li class="dropdown-subitem"><a href="/zh/miscellaneous/design-concepts.html" class="nav-link">
+  设计理念
+</a></li><li class="dropdown-subitem"><a href="/zh/faq/" class="nav-link">
+  FAQ
+</a></li><li class="dropdown-subitem"><a href="/zh/miscellaneous/glossary.html" class="nav-link">
+  术语
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其他
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/zh/miscellaneous/migration-guide.html" class="nav-link">
+  从 0.x 迁移
+</a></li><li class="dropdown-subitem"><a href="https://github.com/vuejs/vuepress/blob/master/CHANGELOG.md" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Changelog
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://v0.vuepress.vuejs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  0.x
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="选择语言" class="dropdown-title"><span class="title">选择语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/guide/" class="nav-link">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/zh/guide/" class="nav-link router-link-exact-active router-link-active">
+  简体中文
+</a></li></ul></div></div> <a href="https://github.com/vuejs/vuepress" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/zh/guide/" class="nav-link router-link-exact-active router-link-active">
+  指南
+</a></div><div class="nav-item"><a href="/zh/config/" class="nav-link">
+  配置
+</a></div><div class="nav-item"><a href="/zh/plugin/" class="nav-link">
+  插件
+</a></div><div class="nav-item"><a href="/zh/theme/" class="nav-link">
+  主题
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="了解更多" class="dropdown-title"><span class="title">了解更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          API
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/zh/api/cli.html" class="nav-link">
+  CLI
+</a></li><li class="dropdown-subitem"><a href="/zh/api/node.html" class="nav-link">
+  Node
+</a></li></ul></li><li class="dropdown-item"><h4>
+          开发指南
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/zh/miscellaneous/local-development.html" class="nav-link">
+  本地开发
+</a></li><li class="dropdown-subitem"><a href="/zh/miscellaneous/design-concepts.html" class="nav-link">
+  设计理念
+</a></li><li class="dropdown-subitem"><a href="/zh/faq/" class="nav-link">
+  FAQ
+</a></li><li class="dropdown-subitem"><a href="/zh/miscellaneous/glossary.html" class="nav-link">
+  术语
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其他
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/zh/miscellaneous/migration-guide.html" class="nav-link">
+  从 0.x 迁移
+</a></li><li class="dropdown-subitem"><a href="https://github.com/vuejs/vuepress/blob/master/CHANGELOG.md" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Changelog
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://v0.vuepress.vuejs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  0.x
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="选择语言" class="dropdown-title"><span class="title">选择语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/guide/" class="nav-link">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/zh/guide/" class="nav-link router-link-exact-active router-link-active">
+  简体中文
+</a></li></ul></div></div> <a href="https://github.com/vuejs/vuepress" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav> <div class="carbon-ads"></div> <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>指南</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/zh/guide/" class="active sidebar-link">ES6</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/zh/guide/#babel" class="sidebar-link">Babel</a></li><li class="sidebar-sub-header"><a href="/zh/guide/#声明方式-let-const" class="sidebar-link">声明方式 let &amp; const</a></li><li class="sidebar-sub-header"><a href="/zh/guide/#解构赋值" class="sidebar-link">解构赋值</a></li><li class="sidebar-sub-header"><a href="/zh/guide/#模板字符串" class="sidebar-link">模板字符串</a></li><li class="sidebar-sub-header"><a href="/zh/guide/#其他api" class="sidebar-link">其他API</a></li><li class="sidebar-sub-header"><a href="/zh/guide/#箭头函数" class="sidebar-link">箭头函数</a></li><li class="sidebar-sub-header"><a href="/zh/guide/#展开运算符" class="sidebar-link">展开运算符</a></li><li class="sidebar-sub-header"><a href="/zh/guide/#数组的常见方法" class="sidebar-link">数组的常见方法</a></li><li class="sidebar-sub-header"><a href="/zh/guide/#对象的方法" class="sidebar-link">对象的方法</a></li><li class="sidebar-sub-header"><a href="/zh/guide/#类" class="sidebar-link">类</a></li><li class="sidebar-sub-header"><a href="/zh/guide/#promise" class="sidebar-link">Promise</a></li></ul></li><li><a href="/zh/guide/getting-started.html" class="sidebar-link">快速上手</a></li><li><a href="/zh/guide/directory-structure.html" class="sidebar-link">目录结构</a></li><li><a href="/zh/guide/basic-config.html" class="sidebar-link">基本配置</a></li><li><a href="/zh/guide/assets.html" class="sidebar-link">静态资源</a></li><li><a href="/zh/guide/markdown.html" class="sidebar-link">Markdown 拓展</a></li><li><a href="/zh/guide/using-vue.html" class="sidebar-link">在 Markdown 中 使用 Vue</a></li><li><a href="/zh/guide/i18n.html" class="sidebar-link">多语言支持</a></li><li><a href="/zh/guide/deploy.html" class="sidebar-link">部署</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>深入</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/zh/guide/frontmatter.html" class="sidebar-link">Front Matter</a></li><li><a href="/zh/guide/permalinks.html" class="sidebar-link">永久链接</a></li><li><a href="/zh/guide/markdown-slot.html" class="sidebar-link">Markdown 插槽</a></li><li><a href="/zh/guide/global-computed.html" class="sidebar-link">全局计算属性</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="es6"><a href="#es6" class="header-anchor">#</a> ES6</h1> <h2 id="babel"><a href="#babel" class="header-anchor">#</a> Babel</h2> <p><a href="http://babeljs.io/repl" target="_blank" rel="noopener noreferrer">将ES6代码转换成浏览器可用的代码
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h2 id="声明方式-let-const"><a href="#声明方式-let-const" class="header-anchor">#</a> 声明方式 let &amp; const</h2> <div class="language- extra-class"><pre class="language-text"><code>for(var i = 0; i&lt; 3; i++){
+  console.log(i)
+}
+console.log(i)
+console.log(window.i)
+</code></pre></div><p>var 不支持封闭作用域，会声明到全局作用域上，支持</p> <ul><li>1.函数作用域</li> <li>2.全局作用域</li></ul> <p>let 和 {} 配合可以产生一个作用域， let支持块级作用域，可以解决作用域污染和局部作用域的问题</p> <p>var 在同一个作用域下可以多次声明同一个变量，而let不可以</p> <div class="language- extra-class"><pre class="language-text"><code>var a = 1
+var a = 2
+</code></pre></div><p>var 域解释问题，变量提升, 用let解决这个问题</p> <div class="language- extra-class"><pre class="language-text"><code>console.log(a)
+var a = 1
+</code></pre></div><p>暂存死区问题,如果作用域内有这个变量，那么这个作用域内就会绑定这个值，不会再向上查找</p> <div class="language- extra-class"><pre class="language-text"><code>let a = 1
+{
+  console.log(a)
+  let a = 2
+}
+</code></pre></div><p>通过const声明的变量不能被修改（引用空间）, 不能修改变量的地址</p> <div class="language- extra-class"><pre class="language-text"><code>const a = {name: 'zfpx'}
+a.age = 9
+console.log(1)
+</code></pre></div><h2 id="解构赋值"><a href="#解构赋值" class="header-anchor">#</a> 解构赋值</h2> <p>解构表示等号左右两边结构类似</p> <div class="language- extra-class"><pre class="language-text"><code>let [name, age] = ['珠峰', 9]
+console.log(name, age)
+
+let {length} = ['珠峰', 9]
+console.log(length)
+
+// 关键字
+let {name, age, default:d} = {name: '珠峰', age: 9, default: 'xx'}
+
+// 多层级
+let [, {address: [, a]}, hobby= '游泳'] = [
+  {
+    name: 'zhufeng
+  },{
+    age: 9,
+    address: [1,2,3]
+  }]
+</code></pre></div><h2 id="模板字符串"><a href="#模板字符串" class="header-anchor">#</a> 模板字符串</h2> <p>取代了原有的字符串拼接功能</p> <div class="language- extra-class"><pre class="language-text"><code>let name = '珠峰'
+let age = 10
+let str = 'hello ' + name + ' 今年'+ age + '岁了'
+let str = `hello ${name} 今年${age}岁了`
+</code></pre></div><p>如何实现一个类模板字符串功能？</p> <div class="language- extra-class"><pre class="language-text"><code>let name = '珠峰'
+let age = 10
+let str = `hello ${name} 今年${age}岁了`
+str = str.replace(/\$\{([^}*])\}/g, function(){
+  return eval(arguments[1])
+})
+console.log(str)
+</code></pre></div><p>带标签的模板字符 自定义模板字符串的实现</p> <div class="language- extra-class"><pre class="language-text"><code>let name = 'zfpx'
+let age = 9
+
+// 第一个参数是字符串数组， 第二个参数是第一个变量
+function jw(){
+  let strings = arguments[0]
+
+  // Array.prototype.slice.call
+  let values = [].slice.call(argument, 1)
+  let str = ''
+  for(let i = 0; i &lt; values.length; i++){
+    str += `${strings[i]}*${values[i]}*`
+  }
+  str += strings[strings.length -1]
+  return str
+}
+let str = jw`hello~${name}今年${age}岁了`
+</code></pre></div><h2 id="其他api"><a href="#其他api" class="header-anchor">#</a> 其他API</h2> <div class="language- extra-class"><pre class="language-text"><code>let url =  'http://www.zhufengpeixun.cn/logo.png'
+
+// 是否包含
+console.log(url.includes('zhufeng'))
+
+// startWith
+console.log(url.startWith('http'))
+
+// endWith
+console.log(url.endWith('png'))
+
+// padStart padEnd 补全
+setInterval(function(){
+  let date = new Date()
+  let hour = date.getHours()
+  let minutes = date.getMinutes()
+  let seconds = date.getSeconds()
+  let str = `${hour.toString().padStart(2,0):`
+  str += `${minutes.toString().padStart(2,0):`
+  str += `${seconds.toString().padStart(2,0)`
+}, 1000)
+</code></pre></div><h2 id="箭头函数"><a href="#箭头函数" class="header-anchor">#</a> 箭头函数</h2> <ul><li>1.箭头函数没有function关键字</li> <li>2.小括号和大括号之间有个箭头</li> <li>3.如果参数是一个，可以省略小括号</li> <li><ol start="4"><li>如果不写return，可以省略{}</li></ol></li> <li><ol start="5"><li>如果返回的是对象，需要小括号包裹</li></ol></li></ul> <div class="language- extra-class"><pre class="language-text"><code>function a(c){
+  return function (d){
+    return c + d
+  }
+}
+
+let a = c =&gt; d =&gt; c + d
+console.log(a(1)(2))
+</code></pre></div><p>解决this问题</p> <ul><li>1.var that = this</li> <li>2.bind</li> <li>3.箭头函数</li></ul> <div class="language- extra-class"><pre class="language-text"><code>
+// 对象不是作用域， let声明的也不会被声明到全局上
+// 箭头函数中没有this，也没有arguments
+let obj = {
+  b: 1,
+  a: function(){
+    setTimeout(()=&gt;{
+      console.log(this)
+    })
+  }
+}
+obj.a()
+</code></pre></div><p>面试题</p> <div class="language- extra-class"><pre class="language-text"><code>let a = 1
+let obj = {
+  a: 2
+  b: ()=&gt;{
+    console.log(this.a)
+  }
+}
+obj.b()
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>let fn = (...arguments) =&gt; {
+  let args = arguments.slice(1)
+  console.log(args)
+}
+fn('x', 1,2,3,4,5)
+</code></pre></div><p>函数中可以赋予默认参数</p> <div class="language- extra-class"><pre class="language-text"><code>let fn = (a=1, b=2) =&gt; {
+  console.log(a,b)
+}
+fn()
+</code></pre></div><h2 id="展开运算符"><a href="#展开运算符" class="header-anchor">#</a> 展开运算符</h2> <p>... 是浅拷贝</p> <div class="language- extra-class"><pre class="language-text"><code>let name = {name: 'zfpx'}
+let age = {age: 9}
+let school = {..name, ...age}
+</code></pre></div><p>深拷贝的实现</p> <div class="language- extra-class"><pre class="language-text"><code>JSON的问题
+let obj = {a: 1, fn: function(params){}, t: /a/, d: new Date()}
+</code></pre></div><p>代码实现，保留继承关系，实现各种类型的拷贝 实现递归拷贝</p> <div class="language- extra-class"><pre class="language-text"><code>function deepClone(obj){
+  if(typeof obj !== 'object') return obj
+  if(obj == null) return null
+  if(obj instanceof Date) return new Date(obj)
+  if(obj instanceof RegExp) return new RegExp(obj)
+
+  let o = new obj.constructor() // 保留类的继承关系
+  for(let key in obj){
+    o[key] = typeof obj[key] === 'object' ? deepClone(obj[key]): obj[key]
+  }
+
+}
+
+deepClone(new Date())
+</code></pre></div><h2 id="数组的常见方法"><a href="#数组的常见方法" class="header-anchor">#</a> 数组的常见方法</h2> <h3 id="reduce-收敛、叠加"><a href="#reduce-收敛、叠加" class="header-anchor">#</a> reduce 收敛、叠加</h3> <p>reduce返回的结果是叠加后的结果，函数的返回结果会作为下一次循环的prev,
+如果有初始值，currIndex从0开始，若没有初始值，currIndex从1开始
+currIndex表示next的索引</p> <div class="language- extra-class"><pre class="language-text"><code>let result = [1,2,3,4,5].reduce((prev, next, currIndex, arr)=&gt;{
+  // 求平均数
+  if(currIndex === arr.length -1){
+    return (prev+next)/ arr.length
+  }
+  console.log(prev, next, currIndex, arr)
+  return prev + next
+})
+</code></pre></div><p>初始值的作用</p> <div class="language- extra-class"><pre class="language-text"><code>let total = [{price: 10}, {price: 20}, {price: 30}].reduce((prev,next,currIndex, arr)=&gt;{
+  return prev + next.price
+}, 0)
+</code></pre></div><p>reduce的实现原理</p> <div class="language- extra-class"><pre class="language-text"><code>Array.prototype.myReduce = function(fn, prev){
+  for(let i=0; i&lt; this.length; i++){
+    if(typeof prev === 'undefined'){
+      prev = fn(this[i], this[i+1], i+1, this)
+      i++
+    }else{
+      prev = fn(prev, this[i], i, this)
+    }
+  }
+  return prev
+}
+</code></pre></div><p>展平数组,将二维数组转换为一维数组</p> <div class="language- extra-class"><pre class="language-text"><code>let flat = [[1,2,3],[4,5,6]].reduce((prev,next,index,array)=&gt;{
+  return [..prev, ...next]
+})
+</code></pre></div><h3 id="foreach"><a href="#foreach" class="header-anchor">#</a> forEach</h3> <div class="language- extra-class"><pre class="language-text"><code>Array.prototype.forEach = function(fn, index){
+  for(let i=0; i&lt;this.length; i++){
+    fn(this[i], i)
+  }
+};
+[1,2,3].forEach((item,index)=&gt;{
+  console.log(item, index)
+})
+</code></pre></div><h3 id="map返回值，是一个新的数组"><a href="#map返回值，是一个新的数组" class="header-anchor">#</a> map返回值，是一个新的数组</h3> <h3 id="filter过滤，如果返回true表示留下，返回false表示删除"><a href="#filter过滤，如果返回true表示留下，返回false表示删除" class="header-anchor">#</a> filter过滤，如果返回true表示留下，返回false表示删除</h3> <h3 id="find查找，返回查找的那一项，如果没有返回undefined-找到后就不会再查找了"><a href="#find查找，返回查找的那一项，如果没有返回undefined-找到后就不会再查找了" class="header-anchor">#</a> find查找，返回查找的那一项，如果没有返回undefined,找到后就不会再查找了</h3> <h3 id="some-找到后返回true，找false可以用every-找到后就不会再找了"><a href="#some-找到后返回true，找false可以用every-找到后就不会再找了" class="header-anchor">#</a> some,找到后返回true，找false可以用every,找到后就不会再找了</h3> <h3 id="from"><a href="#from" class="header-anchor">#</a> from</h3> <div class="language- extra-class"><pre class="language-text"><code>// 将常见的类数组转换成数组
+</code></pre></div><h2 id="对象的方法"><a href="#对象的方法" class="header-anchor">#</a> 对象的方法</h2> <p>Object.assign() // 浅拷贝</p> <p>Object.setPrototypeOf()</p> <div class="language- extra-class"><pre class="language-text"><code>let obj1 = {name: 'zfpe'}
+let obj2 = {age: 9}
+obj1.__proto__ = obj2
+Object.setPrototypeOf(obj1, obj2)
+Object.getPrototypeOf(obj1)
+</code></pre></div><p>可以通过super关键字获取到父属性</p> <div class="language- extra-class"><pre class="language-text"><code>let obj2 = {
+  name: 'jw',
+  age: 10
+}
+let obj = {
+  name: 'zfpx',
+  getPName(){
+    return super.name
+  },
+  __proto__: obj2
+}
+console.log(obj.getPName())
+</code></pre></div><h2 id="类"><a href="#类" class="header-anchor">#</a> 类</h2> <p>类的继承 三种属性， 公有，私有， 静态（ES6）</p> <p>1.继承私有属性</p> <div class="language- extra-class"><pre class="language-text"><code>function Parent(){
+  // 构造函数中的this通过new调用的，那么this指代的是实例, 实例私有
+  this.name = 'parent'
+}
+
+// 实例公有
+Parent.prototype.eat = function() {
+  console.log('eat')
+}
+// Parent.prototype.constructor = Parent
+
+let parent = new Parent()
+// parent.__proto__.eat() // 会先去找私有，如果找不到会去找公有
+
+function Child(){
+  this.age = 9
+  Parent.call(this) // 1.继承私有属性
+}
+
+</code></pre></div><p>2.继承公有属性</p> <div class="language- extra-class"><pre class="language-text"><code>function Parent(){
+  this.name = 'parent'
+}
+Parent.prototype.eat = function() {
+  console.log('eat')
+}
+
+function Child(){
+  this.age = 9
+}
+
+Child.prototype.__proto__ = Parent.prototype // 2.1
+Object.setPrototypeOf(Child.prototype, Parent.prototype) // 2.2 === 2.1
+
+// Object.create
+
+Child.prototype = Object.create(Parent.prototype, {constructor: {value: Child}})
+
+</code></pre></div><p>create的实现原理：</p> <div class="language- extra-class"><pre class="language-text"><code>function create(parentPrototype, props){
+  let Fn = function(){}
+  Fn.prototype = parentPrototype
+  let fn = new Fn()
+  for(let key in props){
+    Object.defineProperty(fn, key, {
+      ...props[key],
+      enumerable: true
+    })
+  }
+  return fn
+}
+</code></pre></div><p>3.继承公有和私有属性
+Child.prototype = new Parent() // 不会使用这种方式</p> <h3 id="object-defineproperty"><a href="#object-defineproperty" class="header-anchor">#</a> Object.defineProperty</h3> <div class="language- extra-class"><pre class="language-text"><code>let a = {}
+Object.defineProperty(a, 'name', {
+  enumerable: true, // 表示这个属性是否可以被枚举
+  configurable: true, // 表示这个属性是否可以被删除
+  // writable: true, // 表示这个属性是否可写
+  // value: 1， // 可以替换成get/set
+  get(){
+    return 1
+  },
+  set(val){
+
+  }
+})
+</code></pre></div><h3 id="es6中的类"><a href="#es6中的类" class="header-anchor">#</a> ES6中的类</h3> <ul><li>1.类只能new</li> <li>2.类可以继承公有、私有、静态方法</li> <li>3.父类的构造函数中返回了一个引用类型，会把这个引用类型返回作为类的实例</li></ul> <div class="language- extra-class"><pre class="language-text"><code>class Parent{
+  this.name = 'zfpx'
+}
+
+class Child{
+  constructor(){
+    this.age  = 9 // 私有属性
+  }
+
+  static a(){
+    return 1
+  }
+  smoking(){ // 原型上的方法
+
+  }
+}
+
+let child = new Child()
+Child.a()
+child.smoking()
+</code></pre></div><h3 id="es5中的类-类的编译"><a href="#es5中的类-类的编译" class="header-anchor">#</a> ES5中的类,类的编译</h3> <div class="language- extra-class"><pre class="language-text"><code>let
+</code></pre></div><h2 id="promise"><a href="#promise" class="header-anchor">#</a> Promise</h2> <p>Promise是一种异步流程的控制手段</p> <ul><li>1.异步回调</li> <li>2.链式调用，第一个的输出是第二个的输入</li> <li>3.可以支持多个并发，获取并发请求中的数据</li></ul> <p>// Promise只有一个参数，叫excutor执行器，默认new时就会调用
+每个promise的实例上都有一个then方法，then方法中有两个回调，
+promise发生错误，会走错误回调</p> <div class="language- extra-class"><pre class="language-text"><code>let p = new Promise((resolve, reject) =&gt;{ // 默认excutor是同步执行的
+  console.log(1)
+})
+console.log(2)
+
+// then方法是异步调用的
+p.then((success)=&gt;{},(err)=&gt;{})
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/vuejs/vuepress/edit/master/packages/docs/docs/zh/guide/README.md" target="_blank" rel="noopener noreferrer">在 GitHub 上编辑此页</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/zh/guide/getting-started.html">
+        快速上手
+      </a>
+      →
+    </span></p></div> <div class="bsa-cpc-wrapper"><div class="bsa-cpc"></div></div></main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app.dd039b7c.js" defer></script><script src="/assets/js/5.d9fe358c.js" defer></script><script src="/assets/js/66.1bc27aef.js" defer></script><script src="/assets/js/9.999afb76.js" defer></script>
+  </body>
+</html>
