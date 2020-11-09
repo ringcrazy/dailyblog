@@ -9,8 +9,8 @@ module.exports = [
     link: '/webpack/'
   },
   {
-    text: '配置',
-    link: '/zh/config/'
+    text: 'vue',
+    link: '/vue/'
   },
   {
     text: '插件',
@@ -25,11 +25,19 @@ module.exports = [
     ariaLabel: '了解更多',
     items: [
       {
-        text: 'API',
+        text: '源码',
         items: [
           {
-            text: 'CLI',
-            link: '/zh/api/cli.html'
+            text: 'promise',
+            link: '/zh/promise/'
+          },
+          {
+            text: 'express',
+            link: '/zh/express/'
+          },
+          {
+            text: 'koa',
+            link: '/zh/koa/'
           },
           {
             text: 'Node',
@@ -38,15 +46,15 @@ module.exports = [
         ]
       },
       {
-        text: '开发指南',
+        text: '算法',
         items: [
           {
-            text: '本地开发',
-            link: '/zh/miscellaneous/local-development.html'
+            text: '基础算法',
+            link: '/math/base/'
           },
           {
-            text: '设计理念',
-            link: '/zh/miscellaneous/design-concepts.html'
+            text: '手写面试',
+            link: '/math/handwriting/'
           },
           {
             text: 'FAQ',

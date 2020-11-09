@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        Function.prototype.bind2 = function (context) {
+
+            let [, ...b] = [...arguments]
+            console.log(context)
+            console.log(b)
+            var self = this; // this 指向调用者
+            let found = function (...args) { // 实现第 2点
+                return self.apply(this instanceof found ? this : context, b.concat(args)); // 实现第 1 点
+            }
+
+            // 原型
+            found.prototype = this.prototype
+
+            // object.create
+            found.prototype = Object.create(this.prototype)
+            // 
+
+            return found
+        }
+
+        var value = 2;
+        var foo = {
+            value: 1
+        };
+
+        function bar() {
+            // console.log(this)
+            return this.value;
+        }
+
+        bar.prototype.name = 'abc'
+
+        var bindFoo = bar.bind2(foo, 'hello');
+
+        bindFoo('world'); // 1
+
+        let obj = new bindFoo('world')
+
+        // obj可以找到原型
+
+        // curry
+        function add(a, b, c, d) {
+            return a + b + c + c
+        }
+        function curry(fn, args = []) {
+            let len = fn.length // 函数参数的长度
+            return (...a) => {
+                args.push(...a) // ...a是数组
+                if (args.length < len) {
+                    // 当参数长度不够时，递归执行curry，返回一个函数，接收第二个参数
+                    return curry(fn, args)
+                }
+                return fn(...args)
+            }
+        }
+
+        let r = curry(add)(1)(2, 3)(4) // 先保存每次调用后的参数
+        console.log(r)
+
+        // curry 应用
+        function get(url) {
+            return function (param) {
+                return axios.get(url, param).then((res) => {
+                    const { errno, data } = res.data
+                    if (errno === 0) {
+                        return data
+                    }
+                }).catch()
+            }
+        }
+
+        const getList = get('/api/getList')
+
+        let result = [1, [2, [3, [4, [5]]]]]
+        Array.prototype.myFlat = function (n = 1) {
+            if (n === 0) return this
+            return this.reduce((a, b) => {
+
+                // 第一次 a为一个空元素
+                if (Array.isArray(b)) {
+                    return a.concat(b.myFlat(--n))
+                } else {
+                    return [...a, b]
+                }
+            }, [])
+        }
+
+        // debugger
+        console.log(result.myFlat(Infinity))
+
+        {
+            let r = [1, [2, [3, [4, [5]]]]]
+            function flatten(input) {
+                const stack = [...input] // 浅复制
+                const res = []
+                while (stack.length) {
+                    // 使用pop从stack中取出并移除值
+                    const next = stack.pop()
+                    if (Array.isArray(next)) {
+                        stack.push(...next)
+                    } else {
+                        res.push(next)
+                    }
+                }
+
+                // 反转恢复原数组的顺序
+                return res.reverse()
+            }
+            
+            console.log(flatten(r))
+        }
+    </script>
+</body>
+
+</html>

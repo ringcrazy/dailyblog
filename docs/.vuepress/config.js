@@ -31,6 +31,9 @@ module.exports = ctx => ({
         sidebar: {
           '/javascript/': getThemeSidebar(),
           '/webpack/': getWebpackSidebar(),
+          '/vue/': getVueSidebar(),
+          '/math/base/': getMathBaseSidebar(),
+          '/math/handwriting/': getHandwritingSidebar(),
           '/guide/': getGuideSidebar('Guide', 'Advanced'),
           '/plugin/': getPluginSidebar('Plugin', 'Introduction', 'Official Plugins'),
           '/theme/': getThemeSidebar('Theme', 'Introduction')
@@ -45,6 +48,10 @@ module.exports = ctx => ({
         nav: require('./nav/zh'),
         sidebar: {
           '/javascript/': getThemeSidebar('主题', '介绍'),
+          '/zh/promise/': getPromiseSidebar(),
+          '/zh/express/': getExpressSidebar(),
+          '/zh/koa/': getKoaSidebar(),
+          
           '/zh/api/': getApiSidebar(),
           '/zh/guide/': getGuideSidebar('01.执行上下文', '02.this', '03.原型', '04.高阶函数'),
           '/zh/plugin/': getPluginSidebar('插件', '介绍', '官方插件'),
@@ -84,6 +91,53 @@ function getApiSidebar () {
     'node'
   ]
 }
+
+function getPromiseSidebar(){
+  return [
+    '',
+    '01.md',
+    '02.md',
+    '03.md'
+  ]
+}
+
+function getExpressSidebar(){
+  return [
+    '01',
+    '02',
+    '03'
+  ]
+}
+
+function getKoaSidebar(){
+  return [
+    '01',
+    '02',
+    '03'
+  ]
+}
+
+
+function getMathBaseSidebar(){
+  return [
+    '',
+    '01',
+    '02',
+    '03',
+    '04',
+    '05',
+    '06'
+  ]
+}
+
+function getHandwritingSidebar(){
+  return [
+    '',
+    '01',
+    '02'
+  ]
+}
+
 function getBlogSidebar(){
 
   // return [{
@@ -255,6 +309,87 @@ function getWebpackSidebar(){
       children: [
         '',
         '01/1.1'
+      ]
+    },
+    {
+      title: '2.Tapable',
+      collapsable: true,
+      // sidebarDepth: 2,
+      children: [
+        '02/2.1',
+        '02/2.2',
+        '02/2.3'
+      ]
+    }
+  ]
+}
+
+// Vue
+function getVueSidebar(){
+  return [
+    {
+      title: 'Vue源码解读',
+      collapsable: true,
+      children: [
+        'src/1.1',
+        'src/1.2',
+        'src/1.3'
+      ]
+    },
+    {
+      title: '1.面试',
+      collapsable: true,
+      // sidebarDepth: 2,
+      children: [
+        '01/1.1'
+      ]
+    },
+    {
+      title: '丰富的选项合并策略',
+      collapsable: true,
+      sidebarDepth: 1,
+      children: [
+        '',
+        '02/2.1',
+        '02/2.2'
+      ]
+    },
+    {
+      title: '基础的数据代理检测',
+      collapsable: true,
+      sidebarDepth: 1,
+      children: [
+        '03/3.1',
+        '03/3.2'
+      ]
+    },
+    {
+      title: '实例挂载流程和模板编译',
+      collapsable: true,
+      sidebarDepth: 1,
+      children: [
+        '04/4.1',
+        '04/4.2',
+        '04/4.3'
+      ]
+    },
+    {
+      title: '实例挂载流程和模板编译',
+      collapsable: true,
+      sidebarDepth: 1,
+      children: [
+        '05/5.1',
+        '05/5.2',
+        '05/5.3'
+      ]
+    },
+    {
+      title: '组件剖析',
+      collapsable: true,
+      sidebarDepth: 1,
+      children: [
+        '06/6.1',
+        '06/6.2'
       ]
     }
   ]

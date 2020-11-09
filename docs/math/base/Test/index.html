@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <canvas id="paint" width="800" height="600"></canvas>
+    <script>
+        const canvas = document.getElementById('paint')
+        const ctx = canvas.getContext('2d')
+
+        /*
+            p:绘制开始位置
+            a: 方向（和垂直屏幕线的夹角）
+            w: 枝干的宽度
+            h: 枝干的长度
+            L: 递归深度
+        */
+
+        tree_plot([400,300], 0, 5, 20, 1)
+        function tree_plot(p, a, w, h, L){
+            if (L > 3) return
+            const [x, y] = p
+
+            const nextX = x + h* Math.sin(a* Math.PI / 180)
+            const nextY = y -h * Math.cos(a * Math.PI / 180)
+
+            tree_plot([nextX, nextY], a-15, w*0.65, h*0.9, L+1)
+            tree_plot([nextX, nextY], a+15, w*0.65, h*0.9, L+1)
+
+            // 绘制一个枝干
+            ctx.translate(x, y)
+            ctx.rotate(a* Math.PI/180)
+            ctx.moveTo(-w/2, 0)
+            ctx.lineTo(-w*0.65/2, -h)
+            ctx.lineTo(w*0.65/2, -h)
+            ctx.lineTo(w/2, 0)
+            // ctx.strokeStyle = color(L)
+            ctx.setTransform(1,0,0,1,0,0)
+            ctx.fill()
+            
+            debugger
+           
+            
+
+            
+        }
+    </script>
+</body>
+</html>
